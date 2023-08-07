@@ -1,0 +1,4 @@
+- mysql connect on localhost 
+- phone_number unique 
+- user registration & authentication 
+- postman collection , request , many responses in different test cases 
