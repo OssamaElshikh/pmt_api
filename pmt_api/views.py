@@ -42,23 +42,4 @@ class UserListCreateAPIView(generics.ListCreateAPIView):
         serializer.save()
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
-# UserObtainTokenView
-# class UserObtainTokenView(generics.CreateAPIView):
-#     """
-#     Obtain JWT token for user authentication.
-#     """
-#     queryset = User.objects.all()
-#     serializer_class = UserSerializer
-
-#     def post(self, request, *args, **kwargs):
-#         username = request.data.get('username')
-#         password = request.data.get('password')
-#         user = User.objects.filter(username=username).first()
-#         if user and user.check_password(password):
-#             refresh = RefreshToken.for_user(user)
-#             user_data = {
-#                 'refresh': str(refresh),
-#                 'access': str(refresh.access_token),
-#             }
-#             return Response(user_data, status=status.HTTP_200_OK)
-#         return Response({'error': 'Invalid credentials'}, status=status.HTTP_401_UNAUTHORIZED)
+#removed 
